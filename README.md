@@ -7,5 +7,30 @@
 ### 流程图 / Pipeline
 
 ```
-原始视频 (MP4)    │    ▼[Step 1] 环境初始化    │    ▼[Step 2] Whisper 语音识别 → 转录文本    │    ▼[Step 3] 生成 SRT 字幕文件    │    ├──► [Step 4] (可选) 嵌入字幕视频 → *_sub.mp4    │    ▼[Step 5] Edge-TTS 配音 + 时长对齐 → *_dub.wav    │    ▼[Step 6] 替换音频 → *_dubbed.mp4    │    ├──► [Step 7] (可选) 嵌入字幕视频 → *_subdubbed.mp4（最终输出）
+原始视频 (MP4)
+    │
+    ▼
+[Step 1] 环境初始化
+    │
+    ▼
+[Step 2] Whisper 语音识别 → 转录文本
+    │
+    ▼
+[Step 3] 生成 SRT 字幕文件
+    │
+    ├──► [Step 4] (可选) 嵌入字幕视频 → *_sub.mp4
+    │
+    ▼
+[Step 5] Edge-TTS 配音 + 时长对齐 → *_dub.wav
+    │
+    ▼
+[Step 6] 替换音频 → *_dubbed.mp4
+    │
+    ├──► [Step 7] (可选) 嵌入字幕视频 → *_subdubbed.mp4（最终输出）
 ```
+
+### 使用说明 / Usage
+
+1. 修改 **Cell 1（超参数配置区）** 中的路径和参数
+2. 依次执行各 Cell（或 "Run All Cells"）
+3. 最终输出为 `*_subdubbed.mp4`
