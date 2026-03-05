@@ -1,3 +1,9 @@
 **/log/*
 .vscode/*
 data/*
+fiftyone/*
+**/_tts_tmp/*
+**/*.srt
+**/*.mp4
+**/*.wav
+**/*.log
